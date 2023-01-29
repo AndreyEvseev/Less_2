@@ -1,6 +1,6 @@
 import math
 
-def result_dictionary(n: int) -> list:
+def result_dictionary(n):
     new_list = [2]
     for num in range(1, n+1):
         new_list.append(num)
