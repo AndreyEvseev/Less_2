@@ -1,8 +1,8 @@
 def sum_number(n):
-    m = str(n).replace('.', '')
-    m = str(m).replace(',', '')
-    m = str(m).replace('-', '')
-    m = str(m).replace(' ', '')
+    m = n.replace('.', '')
+    m = m.replace(',', '')
+    m = m.replace('-', '')
+    m = m.replace(' ', '')
     num = int(m)
     sum = 0
     while num != 0:
@@ -10,8 +10,6 @@ def sum_number(n):
         num //= 10
     return sum
 
-n = float(input('Введите вещественное число: '))
+n = input('Введите вещественное число: ')
 sum = sum_number(n)
 print(sum)
-
-
