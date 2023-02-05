@@ -1,9 +1,9 @@
 import random
 
-def fill_list(n = 10, min = 0, max = 100): 
-    new_list = [random.randint(min, max)]
+def fill_list(n = 10, min_value = 0, max_value = 100): 
+    new_list = [random.randint(min_value, max_value)]
     for i in range(1, n):
-        new_list.append(random.randint(min, max))
+        new_list.append(random.randint(min_value, max_value))
         i += 1
     return new_list
 
@@ -14,11 +14,11 @@ def shuffling_list(user_list):
     return user_list
 
 n = int(input('Количество элементов списка: '))
-min = int(input('Граница 1 диапазона значений элементов списка: '))
-max = int(input('Граница 2 диапазона значений элементов списка: '))
-if max < min:
-    max, min = min, max
-source_list = fill_list(n, min, max)
+min_value = int(input('Граница 1 диапазона значений элементов списка: '))
+max__value = int(input('Граница 2 диапазона значений элементов списка: '))
+if max__value < min_value:
+    max__value, min_value = min_value, max__value
+source_list = fill_list(n, min_value, max__value)
 print(source_list)
 mixed_list = shuffling_list(source_list)
 print(mixed_list)

@@ -1,15 +1,12 @@
 def sum_number(n):
-    m = n.replace('.', '')
-    m = m.replace(',', '')
-    m = m.replace('-', '')
-    m = m.replace(' ', '')
+    m = n.replace('.', '').replace(',', '').replace('-', '').replace(' ', '')
     num = int(m)
-    sum = 0
+    summa = 0
     while num != 0:
-        sum = sum + num % 10
+        summa = summa + num % 10
         num //= 10
-    return sum
+    return summa
 
 n = input('Введите вещественное число: ')
-sum = sum_number(n)
-print(sum)
+sum_digit = sum_number(n)
+print(sum_digit)
